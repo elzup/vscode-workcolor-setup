@@ -1,6 +1,6 @@
 {
   "name": "vscode-workcolor-setup",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "setup vscode frame color, by theme color in manifest.json",
   "homepage": "",
   "author": {
@@ -20,8 +20,8 @@
     "snippet"
   ],
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "prettier": "^1.19.1"
   },
   "repository": "elzup/vscode-workcolor-setup",
   "jest": {
