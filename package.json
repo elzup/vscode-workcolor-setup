@@ -16,7 +16,7 @@
   ],
   "main": "lib/index.sh",
   "bin": {
-    "vscode-workcolor-setup": "index.sh"
+    "vscode-workcolor-setup": "lib/index.sh"
   },
   "keywords": [
     "vscode",
