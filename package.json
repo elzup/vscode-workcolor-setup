@@ -1,6 +1,6 @@
 {
   "name": "vscode-workcolor-setup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "setup vscode frame color, by theme color in manifest.json",
   "homepage": "",
   "author": {
