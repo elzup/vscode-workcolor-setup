@@ -12,11 +12,11 @@
     "test": "jest"
   },
   "files": [
-    "lib"
+    "cli.js"
   ],
-  "main": "lib/index.sh",
+  "main": "cli.js",
   "bin": {
-    "vscode-workcolor-setup": "lib/index.sh"
+    "vscode-workcolor-setup": "cli.js"
   },
   "keywords": [
     "vscode",
@@ -30,5 +30,8 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^6.0.1"
+  }
 }

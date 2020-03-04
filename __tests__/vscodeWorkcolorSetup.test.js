@@ -9,10 +9,9 @@ beforeEach(() => {
 });
 
 it("vscodeWorkcolorSetup", () => {
-  child_process.execSync("(cd __tests__ && sh ../lib/index.sh)");
+  child_process.execSync("(cd __tests__ && node ../cli.js)");
   const res = fs.readFileSync("./__tests__/.vscode/settings.json", "utf-8");
-  expect(res).toMatchInlineSnapshot(`
-    "{ \\"workbench.colorCustomizations\\": { \\"titleBar.activeBackground\\": , \\"titleBar.activeForeground\\": \\"#000000\\" } }
-    "
-  `);
+  expect(res).toMatchInlineSnapshot(
+    `"{\\"workbench.colorCustomizations\\":{\\"titleBar.activeBackground\\":\\"#abcdef\\",\\"titleBar.activeForeground\\":\\"#ffffff\\",\\"activityBar.background\\":\\"#abcdef\\",\\"activityBar.foreground\\":\\"#ffffff\\"}}"`
+  );
 });
