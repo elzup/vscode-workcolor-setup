@@ -16,6 +16,9 @@ function getManifest(path) {
     return false;
   }
 }
+const green = "\u001b[32m";
+const reset = "\u001b[0m";
+const settingsFile = ".vscode/settings.json";
 
 const data = cli.input[0]
   ? getManifest(cli.input[0])
@@ -26,15 +29,24 @@ if (!data) {
   console.error("can not find manifest.json");
 } else {
   const color = JSON.parse(data).theme_color;
-  const setting = {
+  if (!fs.existsSync(".vscode")) {
+    fs.mkdirSync(".vscode");
+    console.log(green + ".vscode/ created" + reset);
+  }
+  if (!fs.existsSync(settingsFile)) {
+    fs.writeFileSync(settingsFile, "{}");
+    console.log(green + ".vscode/manifest.json created" + reset);
+  }
+  const currentSettings = JSON.parse(fs.readFileSync(settingsFile, "utf-8"));
+  const newSettings = Object.assign({}, currentSettings, {
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": color,
       "titleBar.activeForeground": "#ffffff",
       "activityBar.background": color,
       "activityBar.foreground": "#ffffff"
     }
-  };
-  fs.mkdirSync(".vscode");
-  fs.appendFileSync(".vscode/settings.json", JSON.stringify(setting));
-  console.log("successfully setup ./.vscode/settings.json");
+  });
+
+  fs.writeFileSync(settingsFile, JSON.stringify(newSettings));
+  console.log("successfully setup .vscode/settings.json");
 }
