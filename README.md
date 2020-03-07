@@ -1,4 +1,4 @@
-# vscode-workcolor-setup [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# vscode-workcolor-setup [![NPM version][npm-image]][npm-url] ![Node.js CI](https://github.com/elzup/vscode-workcolor-setup/workflows/Node.js%20CI/badge.svg)
 
 > Set VSCode color by manifest.json
 
