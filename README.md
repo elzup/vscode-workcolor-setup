@@ -1,23 +1,31 @@
 # vscode-workcolor-setup [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
 
-## Installation
+> Set VSCode color by manifest.json
 
-```sh
-$ npm install --save vscode-workcolor-setup
-```
+![](https://elzup-image-storage.s3.amazonaws.com/blog/settings_json_%E2%80%94_mitelop_and_TagPage_tsx_%E2%80%94_anozonbiyori.png)
 
 ## Usage
 
 ```js
-const vscodeWorkcolorSetup = require('vscode-workcolor-setup');
-
-vscodeWorkcolorSetup('Rainbow');
+npx vscode-workcolor-setup
 ```
+
+so generate .vscode/settings.json
+
+```
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#2B0065",
+    "titleBar.activeForeground": "#ffffff",
+    "activityBar.background": "#2B0065",
+    "activityBar.foreground": "#ffffff"
+  }
+}
+```
+
 ## License
 
 MIT © [elzup]()
-
 
 [npm-image]: https://badge.fury.io/js/vscode-workcolor-setup.svg
 [npm-url]: https://npmjs.org/package/vscode-workcolor-setup
