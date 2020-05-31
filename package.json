@@ -23,7 +23,7 @@
     "snippet"
   ],
   "devDependencies": {
-    "jest": "25.5.2",
+    "jest": "25.5.4",
     "prettier": "2.0.5"
   },
   "repository": "elzup/vscode-workcolor-setup",
