@@ -32,6 +32,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "meow": "^6.0.1"
+    "meow": "^7.0.0"
   }
 }
